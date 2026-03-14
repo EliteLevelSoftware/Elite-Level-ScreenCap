@@ -10,7 +10,7 @@
 [![Electron](https://img.shields.io/badge/Built%20With-Electron-47848F?style=flat-square&logo=electron)](https://www.electronjs.org/)
 [![License](https://img.shields.io/badge/License-Proprietary-red?style=flat-square)](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap)
 [![Release](https://img.shields.io/github/v/release/EliteLevelSoftware/Elite-Level-ScreenCap?style=flat-square&color=gold)](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap/releases)
-
+[![Downloads](https://img.shields.io/github/downloads/EliteLevelSoftware/Elite-Level-ScreenCap/total?style=flat-square&color=gold&label=Downloads)](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap/releases)
 </div>
 
 ---
