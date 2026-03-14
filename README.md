@@ -99,45 +99,6 @@ Two shortcuts are created on install:
 
 ---
 
-## Building from Source
-
-**Prerequisites:** [Node.js](https://nodejs.org) (v18+)
-
-```bash
-git clone https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap.git
-cd Elite-Level-ScreenCap
-npm install
-npm start
-```
-
-To build a distributable installer:
-```bash
-# Double-click Compile.bat
-# OR run manually:
-npm run build-win
-```
-
-Output files appear in `dist\`:
-- `Elite Level ScreenCap Setup x.x.x.exe` — NSIS installer with Start Menu + Desktop shortcuts
-- `Elite Level ScreenCap x.x.x.exe` — Portable executable, no install required
-
----
-
-## Architecture
-
-| Component | File | Description |
-|-----------|------|-------------|
-| Main Process | `main.js` | Electron backend — windows, tray, IPC, hotkeys, capture engine |
-| Capture Tool | `capture-tool.html` | Floating launcher window |
-| Editor | `src/renderer/editor.html` | Full annotation editor |
-| Overlay | `src/renderer/overlay.html` | Per-display region selection overlay |
-| Intro | `src/renderer/intro.html` | Branded launch animation |
-| Tray Notification | `tray-notification.html` | Bottom-right toast notification |
-
-The app uses a **single-instance lock** — launching a second instance hands off to the running process rather than spawning a duplicate. Multiple Electron renderer processes in Task Manager are normal (Chromium multi-process architecture).
-
----
-
 ## Keyboard Shortcuts
 
 | Shortcut | Action |
