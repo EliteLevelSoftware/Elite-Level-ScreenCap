@@ -36,6 +36,8 @@ The app ships as two tools in one:
 - **Settings window:** rebind every hotkey, choose where screenshots and recordings are saved, and set recording and startup options.
 - **Electron 44 (Chromium 152)**, bringing native MP4 recording and current security fixes.
 
+**v1.2.1** fixes copying images to the clipboard.
+
 See the [v1.2.0 release notes](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap/releases/tag/v1.2.0) for everything, or [all releases](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap/releases) for earlier changes.
 
 ---
