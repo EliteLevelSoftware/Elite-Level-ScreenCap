@@ -3,7 +3,7 @@
 <img src="https://i.imgur.com/hHI2NFW.png" width="96"/>
 
 # Elite Level ScreenCap
-### Professional Screenshot & Image Annotation Tool
+### Professional Screenshot, Screen Recording & Image Annotation Tool
 **by Elite Level Software**
 
 [![Platform](https://img.shields.io/badge/Platform-Windows-blue?style=flat-square&logo=windows)](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap/releases)
@@ -21,7 +21,7 @@
 
 ## Overview
 
-**Elite Level ScreenCap** is a professional-grade screenshot and image annotation tool built for power users. Capture any region of your screen, annotate it with a full set of drawing tools, apply effects, and export, all from a sleek, dark-themed interface.
+**Elite Level ScreenCap** is a professional-grade screenshot, screen-recording and image annotation tool built for power users. Capture or record any region of your screen, annotate screenshots with a full set of drawing tools, crop and trim recordings, and share, all from a sleek, dark-themed interface.
 
 The app ships as two tools in one:
 - 🎯 **Elite Level ScreenCap**: the capture launcher. It lives in your system tray, always ready.
@@ -29,18 +29,14 @@ The app ships as two tools in one:
 
 ---
 
-## 🆕 What's New in v1.1.0
+## 🆕 What's New in v1.2.0
 
-- **PrintScreen takeover:** ScreenCap detects when another app or the Windows 11 Snipping Tool setting has taken the PrintScreen key, and can take it back automatically.
-- **Captures always reach the editor**, even if you closed it.
-- **Pixel-accurate region capture at any Windows scaling** (125%, 150% and mixed-DPI multi-monitor setups), at full native resolution.
-- **Export and Copy keep your annotations editable.**
-- **Undo/redo rewritten.** It now covers crop, rotate, erase, fill, typing and style changes.
-- **Stronger redaction:** Blur/Redact now pixelates and blurs right to the edge.
-- **Faster:** instant Recent/Library tabs and smoother drawing and dragging.
-- **The tray popup no longer appears in screenshots.**
+- **Screen recording:** press `Shift+PrintScreen`, drag to select an area just like a screenshot, and record it to MP4 with system audio, your microphone, or both.
+- **Preview before you share:** crop out anything you didn't mean to record, trim the start and end, or remove the audio, then Save or Copy the video straight into Discord.
+- **Settings window:** rebind every hotkey, choose where screenshots and recordings are saved, and set recording and startup options.
+- **Electron 44 (Chromium 152)**, bringing native MP4 recording and current security fixes.
 
-See the [v1.1.0 release notes](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap/releases/tag/v1.1.0) for the full list.
+See the [v1.2.0 release notes](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap/releases/tag/v1.2.0) for everything, or [all releases](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap/releases) for earlier changes.
 
 ---
 
@@ -55,6 +51,25 @@ See the [v1.1.0 release notes](https://github.com/EliteLevelSoftware/Elite-Level
 - **Clipboard & Preview** toggles: copy straight to the clipboard or open in the editor.
 - **Capture Delay** support.
 - ScreenCap's own windows and popups hide before the capture fires, so they never appear in your screenshot.
+
+### 🎬 Screen Recording
+- **Record a region:** same drag-to-select overlay as screenshots, including window snapping, handles and Enter.
+- **MP4 (H.264 + AAC)** that plays everywhere, using your GPU's hardware encoder where available.
+- **System sound and/or microphone,** each with its own switch.
+- **3-2-1 countdown, recording border and a floating control bar** (pause, stop, discard). None of them appear in the video.
+- **Preview window:**
+  - Drag-to-crop with ratio presets.
+  - Trim the start and end.
+  - Remove the audio.
+  - Save, Save As, Copy (the video file itself, for pasting into Discord or Explorer), Show in Folder and Delete.
+- Recordings are saved to `Videos\Elite Level ScreenCap` by default. You can change this in Settings.
+
+### ⚙️ Settings
+- **Hotkeys:** rebind Capture Region, Capture Full Screen and Record/Stop. Click a hotkey and press the new combination. ScreenCap warns about duplicates and combinations another app already uses.
+- **Save locations:** choose the folders for screenshots and recordings.
+- **Recording:** frame rate (15 / 24 / 30 / 60), countdown, and default audio sources.
+- **PrintScreen conflicts:** ask, fix automatically, or do nothing.
+- **Start with Windows.**
 
 ### ✏️ Annotation Tools
 | Tool | Description |
@@ -112,7 +127,7 @@ See the [v1.1.0 release notes](https://github.com/EliteLevelSoftware/Elite-Level
 
 Download **`Elite Level ScreenCap Setup x.x.x.exe`** from the [latest release](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap/releases/latest) and run it.
 
-**Requirements:** Windows 10 or later (x64)
+**Requirements:** Windows 10 (version 2004 or later) or Windows 11, x64
 
 The installer creates two shortcuts:
 - **Elite Level ScreenCap** launches the full app with the tray icon and capture tool.
@@ -125,7 +140,13 @@ The installer creates two shortcuts:
 ## Troubleshooting
 
 **PrintScreen doesn't open ScreenCap**
-Another app has probably taken the key. Right-click the tray icon and choose **Fix PrintScreen Hotkey…**. ScreenCap shows which app is using the key and can fix it for you. If the culprit was the Windows *"Use the Print screen key to open screen capture"* setting and the key still doesn't work, sign out and back in once.
+Another app has probably taken the key. Right-click the tray icon and choose **Fix PrintScreen Hotkey…**, or open **Settings** and use **Check** under *PrintScreen conflicts*. You can also move the capture hotkey to a different combination in **Settings → Hotkeys**. ScreenCap shows which app is using the key and can fix it for you. If the culprit was the Windows *"Use the Print screen key to open screen capture"* setting and the key still doesn't work, sign out and back in once.
+
+**The microphone isn't recorded**
+Turn on Windows **Settings → Privacy & security → Microphone → Let desktop apps access your microphone**. The recording bar shows a warning icon when the mic couldn't be opened.
+
+**I recorded sound I didn't want**
+In the preview window, switch **Audio** off (or press `M`) and click **Save**.
 
 **OneDrive or Dropbox screenshot saving**
 These can't be closed safely, so turn off their screenshot feature instead:
@@ -140,6 +161,7 @@ These can't be closed safely, so turn off their screenshot feature instead:
 |----------|--------|
 | `PrintScreen` | Capture region |
 | `Ctrl+PrintScreen` | Capture fullscreen |
+| `Shift+PrintScreen` | Record region, or stop recording |
 | `Enter` | Confirm the region selection |
 | `Escape` | Cancel/reset current operation |
 | `Ctrl+Z` | Undo |
@@ -147,6 +169,19 @@ These can't be closed safely, so turn off their screenshot feature instead:
 | `Ctrl+C` | Copy image to clipboard |
 | `Ctrl+S` | Save As |
 | `F12` | Toggle DevTools |
+
+The three capture hotkeys can be changed in **Settings → Hotkeys**.
+
+**Recording preview**
+
+| Shortcut | Action |
+|----------|--------|
+| `Space` | Play / pause |
+| `I` / `O` | Set trim start / end at the playhead |
+| `M` | Keep or remove audio |
+| `←` / `→` | Step one frame (hold `Shift` for 1 second) |
+| `Ctrl+S` | Save edits |
+| `Ctrl+C` | Copy the video file |
 
 ---
 
