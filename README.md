@@ -29,16 +29,15 @@ The app ships as two tools in one:
 
 ---
 
-## 🆕 What's New in v1.2.0
+## 🆕 What's New in v1.3.0
 
-- **Screen recording:** press `Shift+PrintScreen`, drag to select an area just like a screenshot, and record it to MP4 with system audio, your microphone, or both.
-- **Preview before you share:** crop out anything you didn't mean to record, trim the start and end, or remove the audio, then Save or Copy the video straight into Discord.
-- **Settings window:** rebind every hotkey, choose where screenshots and recordings are saved, and set recording and startup options.
-- **Electron 44 (Chromium 152)**, bringing native MP4 recording and current security fixes.
+- **PrintScreen works over games and admin apps:** hotkeys now work while a game launcher or game that runs as administrator is in front. The installer sets this up, and Windows asks for permission once.
+- **Automatic updates:** ScreenCap tells you when a new version is out, shows what's new, and installs it with one click.
+- **Settings → Updates** and **Check for Updates…** in the tray menu.
 
-**v1.2.1** fixes copying images to the clipboard.
+**v1.2** added screen recording with a crop/trim preview, and the Settings window.
 
-See the [v1.2.0 release notes](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap/releases/tag/v1.2.0) for everything, or [all releases](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap/releases) for earlier changes.
+See the [v1.3.0 release notes](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap/releases/tag/v1.3.0), or [all releases](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap/releases) for earlier changes.
 
 ---
 
@@ -48,7 +47,7 @@ See the [v1.2.0 release notes](https://github.com/EliteLevelSoftware/Elite-Level
 - **Region Capture:** drag to select any area on one monitor or across several, with pixel-accurate results at any Windows display scaling.
 - **Fullscreen Capture:** capture any display instantly.
 - **Window Snapping:** hover over a window to snap the selection to its bounds. The visible, top-most window always wins.
-- **Global Hotkeys:** `PrintScreen` for region, `Ctrl+PrintScreen` for fullscreen.
+- **Global Hotkeys:** `PrintScreen` for region, `Ctrl+PrintScreen` for fullscreen. They work over games and apps running as administrator too.
 - **PrintScreen Takeover:** detects conflicts with the Windows Snipping Tool setting, ShareX, Greenshot, Lightshot, Snagit and others, and fixes them with one click or automatically.
 - **Clipboard & Preview** toggles: copy straight to the clipboard or open in the editor.
 - **Capture Delay** support.
@@ -71,6 +70,8 @@ See the [v1.2.0 release notes](https://github.com/EliteLevelSoftware/Elite-Level
 - **Save locations:** choose the folders for screenshots and recordings.
 - **Recording:** frame rate (15 / 24 / 30 / 60), countdown, and default audio sources.
 - **PrintScreen conflicts:** ask, fix automatically, or do nothing.
+- **Admin apps & games:** lets your hotkeys work while a program running as administrator is in front. It's on by default.
+- **Updates:** see your version and check for a new one.
 - **Start with Windows.**
 
 ### ✏️ Annotation Tools
@@ -127,7 +128,7 @@ See the [v1.2.0 release notes](https://github.com/EliteLevelSoftware/Elite-Level
 
 ## Installation
 
-Download **`Elite Level ScreenCap Setup x.x.x.exe`** from the [latest release](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap/releases/latest) and run it.
+Download **`Elite-Level-ScreenCap-Setup-x.x.x.exe`** from the [latest release](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap/releases/latest) and run it. During setup, Windows asks once for permission to let your hotkeys work over games and admin apps.
 
 **Requirements:** Windows 10 (version 2004 or later) or Windows 11, x64
 
@@ -135,7 +136,7 @@ The installer creates two shortcuts:
 - **Elite Level ScreenCap** launches the full app with the tray icon and capture tool.
 - **Elite Image Editor** launches straight into the editor. It's single-instance, so it reuses ScreenCap if it's already running.
 
-**Upgrading:** quit ScreenCap from the tray icon (right-click → *Quit Elite Level ScreenCap*), then run the new installer. Your captures, projects and settings are kept.
+**Updates:** from v1.3.0, ScreenCap updates itself. When a new version is out, it shows what's new with **Install** and **Later** buttons. To upgrade from an older version, quit ScreenCap from the tray icon (right-click → *Quit Elite Level ScreenCap*) and run the new installer. Your captures, projects and settings are kept.
 
 ---
 
@@ -143,6 +144,9 @@ The installer creates two shortcuts:
 
 **PrintScreen doesn't open ScreenCap**
 Another app has probably taken the key. Right-click the tray icon and choose **Fix PrintScreen Hotkey…**, or open **Settings** and use **Check** under *PrintScreen conflicts*. You can also move the capture hotkey to a different combination in **Settings → Hotkeys**. ScreenCap shows which app is using the key and can fix it for you. If the culprit was the Windows *"Use the Print screen key to open screen capture"* setting and the key still doesn't work, sign out and back in once.
+
+**PrintScreen doesn't work while a game or launcher is in front**
+That program is running as administrator. Open **Settings → Admin apps & games** and make sure **Hotkeys work over admin apps** is on. If it says the helper isn't running, click **Restart helper**.
 
 **The microphone isn't recorded**
 Turn on Windows **Settings → Privacy & security → Microphone → Let desktop apps access your microphone**. The recording bar shows a warning icon when the mic couldn't be opened.
