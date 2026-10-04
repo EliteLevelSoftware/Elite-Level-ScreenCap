@@ -35,6 +35,8 @@ The app ships as two tools in one:
 - **Automatic updates:** ScreenCap tells you when a new version is out, shows what's new, and installs it with one click.
 - **Settings → Updates** and **Check for Updates…** in the tray menu.
 
+**v1.3.1:** update prompts wait until you finish a capture or recording, and never appear in your captures.
+
 **v1.2** added screen recording with a crop/trim preview, and the Settings window.
 
 See the [v1.3.0 release notes](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap/releases/tag/v1.3.0), or [all releases](https://github.com/EliteLevelSoftware/Elite-Level-ScreenCap/releases) for earlier changes.
